@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Blaz</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList />
+			<regexCodePropertyList />
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>Casting Queue</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>You start chanting...</name>
+					<script>Blaz.Busy = true
+if Blaz.Spell then
+  getReadyToCast(Blaz.Spell["spell"])
+end</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>You start chanting...</string>
+						<string>Casting: .* \*+</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>3</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Casting Over</name>
+					<script>castingOver()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>You complete your spell.</string>
+						<string>You do not know that spell!</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>3</integer>
+						<integer>3</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Process Queue</name>
+					<script>processQueue()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string></string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>7</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Start Queue</name>
+					<script>processQueue()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>You begin to float.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>3</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Memorize Spells</name>
+					<script>Blaz.Busy = false
+memorize()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>You do not have that spell memorized!</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>3</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Disengage from combat</name>
+					<script>gmcp.Char.Combat = {}
+processQueue()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>You disengage from combat.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>3</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Studies Done</name>
+					<script>Blaz.Busy = false
+fly()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>You have completed your studies.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>3</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Spell Failed</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList />
+					<regexCodePropertyList />
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>I cannot cast this spell on someone else</name>
+						<script>raiseGlobalEvent("blazSpellFailed",Blaz.Spell.target, Blaz.Spell.spell)
+castingOver()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>You can only cast this spell upon yourself!</string>
+							<string>Upon whom should the spell be cast?</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>3</integer>
+							<integer>3</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Don't know the spell</name>
+						<script>castingOver()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>You do not know that spell!</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>3</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Target Not Here</name>
+						<script>raiseGlobalEvent("blazTargetNotHereEvent",Blaz.Spell.spell,Blaz.Spell.target)
+castingOver()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Cannot find the target of your spell!</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>3</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Requeue Failure</name>
+						<script>send("disen")
+if Blaz.Spell then
+  table.insert(Blaz.SpellQueue, Blaz.Spell, 0)
+end
+Blaz.Spell = nil
+Blaz.Busy = false
+processQueue()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>1</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Impossible!  You can't concentrate enough!</string>
+							<string>You stop chanting abruptly!</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>3</integer>
+							<integer>3</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</TriggerGroup>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>Group</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Clear Group</name>
+					<script>Blaz.Group = {}</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>But you are not the member of a group!</string>
+						<string>You have left your group!</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>3</integer>
+						<integer>3</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Show Group</name>
+					<script>
+send("group")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>You have been accepted into Choak's group.</string>
+						<string>\w+ has joined your group.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>3</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Add Member</name>
+					<script>Blaz.Group[matches[2]] = Blaz.Classes[matches[3]]</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^(\w+)\s+\[\s*\d+h\/\s*\d+H\s*\d+v\/\d+V\]\s+\[([A-Z][a-z]{2})\].*$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+		</TriggerGroup>
+	</TriggerPackage>
+	<TimerPackage />
+	<AliasPackage>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>Blaz</name>
+			<script></script>
+			<command></command>
+			<packageName></packageName>
+			<regex></regex>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>Menus</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>Help</name>
+					<script>printMenuHeaderLine()
+printMenuHeader("Welcome to Blaz!")
+printMenuHeaderLine()
+printMenuParagraph("I created this script to help users manage their characters better in FieryMUD. I have dreams of a full featured complete setup where you basically control 1 character and the rest do what they are supposed to as you have them set up. This is NOT TO BE USED TO BOT!!! FieryMUD strictly prohibits this and I will NOT be responsible when you get punished.")
+printMenuLine()
+printMenuParagraph("Alias List: blazhelp, blazmenu, autospell, MORE TO COME")
+printMenuLine()
+printMenuParagraph("Current Character Information (blazinfo):")
+expandAlias("blazinfonoheader",false)
+printMenuLine()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^blazhelp$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Menu</name>
+					<script>printMenuHeaderLine()
+printMenuHeader("Blaz Script Menu")
+printMenuHeaderLine()
+printMenuJustified("autospell","Cast/Request Spells on SELF")
+printMenuJustified("autoheal","Set Auto Heal Cast/Request")
+printMenuJustified("autoskill","Set Auto Usage of Skills")
+printMenuLine()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^blazmenu$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Info</name>
+					<script>if matches[2] == nil then
+  printMenuLine()
+  printMenuParagraph("Current Setup Information")
+  printMenuLine()
+end
+printMenuJustified("Name",gmcp.Char.name)
+printMenuJustified("Class",gmcp.Char.class)
+printMenuJustified("AutoSpells","Spell")
+printMenuLine()
+local num = 1
+for Key, Value in pairs(Blaz.AutoSpells) do
+  if Value.auto then
+    printMenuJustified(tostring(num),Key)
+    num = 1 + num
+  end
+end
+printMenuLine()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^blazinfo(noheader)?$</regex>
+				</Alias>
+				<AliasGroup isActive="yes" isFolder="yes">
+					<name>Spells</name>
+					<script></script>
+					<command></command>
+					<packageName></packageName>
+					<regex></regex>
+					<Alias isActive="yes" isFolder="no">
+						<name>Auto Spells</name>
+						<script>Blaz.AutoSpells = Blaz.AutoSpells or {}
+printMenuHeaderLine()
+printMenuHeader("Automatic Spell Recasting")
+printMenuHeaderLine()
+for Key, Value in pairs(Blaz.Spells) do
+  if containsKey(Value,"fade_message") and Value["aggressive"] ~= true then
+    local on_off = false
+    if containsKey(Blaz.AutoSpells, Key) then
+      on_off = Blaz.AutoSpells[Key]["auto"] or false
+    end
+    on_off = tostring(on_off)
+    if Blaz.Spells[Key].Classes[gmcp.Char.class] or containsAny(Blaz.Spells[Key].Classes,Blaz.Tabs) then
+      printMenuJustified(Key, on_off)
+    else
+      printMenuJustified("&lt;red&gt;"..Key,on_off)
+    end
+  end
+end
+printMenuLine()
+printMenuPadded("To Toggle Spell 'autospell [SPELL]'"," ")
+printMenuPadded("Red items are not available in your current group"," ")
+printMenuLine()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^autospell$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>Auto Spell Toggle</name>
+						<script>local spell = matches[2]
+local auto = not (Blaz.AutoSpells[spell] and Blaz.AutoSpells[spell]["auto"])
+if containsKey(Blaz.Spells, spell) then
+  Blaz.AutoSpells[spell] = Blaz.AutoSpells[spell] or {}
+  Blaz.AutoSpells[spell]["auto"] = auto
+  Blaz.AutoSpells[spell]["refreshing"] = false
+  local location = getMudletHomeDir() .. BlazPath
+  table.save(location, Blaz)
+  printScript("Automatic Casting of '"..spell.."' set to '"..tostring(auto).."'")
+  printScript("AutoSpells savd in: "..location)
+  autoSpells()
+  -- TODO: Add warning if the spell isn't in current group
+  -- printScriptWarn("")
+else
+  printScript("'"..spell.."' is not a spell Blaz Script knows about.")
+  printScript("To get it added to the script email blazspams@gmail.com")
+end</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^autospell\s+(.*)$</regex>
+					</Alias>
+				</AliasGroup>
+				<AliasGroup isActive="yes" isFolder="yes">
+					<name>Heals</name>
+					<script></script>
+					<command></command>
+					<packageName></packageName>
+					<regex></regex>
+					<Alias isActive="yes" isFolder="no">
+						<name>Auto Heals</name>
+						<script>printMenuHeaderLine()
+printMenuHeader("Automatic Healing (TODO)")
+printMenuHeaderLine()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^autoheal$</regex>
+					</Alias>
+				</AliasGroup>
+				<AliasGroup isActive="yes" isFolder="yes">
+					<name>Skills</name>
+					<script></script>
+					<command></command>
+					<packageName></packageName>
+					<regex></regex>
+					<Alias isActive="yes" isFolder="no">
+						<name>Auto Skills</name>
+						<script>printMenuHeaderLine()
+printMenuHeader("Automatic Skills (TODO)")
+printMenuHeaderLine()
+
+
+
+-- printMenuLine()
+-- printMenuPadded("To Toggle Skill 'autorescue [SKILL]'"," ")
+-- printMenuLine()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^autoskill$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>Auto Rescue Toggle</name>
+						<script></script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^autorescue \s+(.*)$</regex>
+					</Alias>
+				</AliasGroup>
+			</AliasGroup>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>All Spells</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>Detect Magic</name>
+					<script>sendSpell("detect magic", matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^dmagic(?:\s(\w+))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Waterwalk</name>
+					<script>sendSpell("waterwalk", matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:ww|waterwalk)(?:\s(\w+))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Detect Invisibility</name>
+					<script>sendSpell("detect invisibility", matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:dinvis)(?:\s(\w+))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Locate Object</name>
+					<script>sendSpell("locate object", matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:locate|locateobj)\s+(\w+)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Wall of Ice</name>
+					<script>sendSpell("wall of ice", matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:iwall)\s+(north|east|south|west|up|down|n|e|s|w|u|d)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Extinguish</name>
+					<script>sendSpell("extinguish", matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:ext|extinguish|exting)(?:\s(\w+))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Dispel Magic</name>
+					<script>sendSpell("dispel magic",matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:dispmag|dispelmagic|dispelm|dispelmag)(?:\s(\w+))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Negate Cold</name>
+					<script>sendSpell("negate cold","")</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:negatec|negatecold)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Waterform</name>
+					<script>sendSpell("waterform","")</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:waterf|waterform)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Minor Globe</name>
+					<script>sendSpell("minor globe",matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:minglobe|minorglobe)(?:\s(\w+))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Major Globe</name>
+					<script>sendSpell("major globe",matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:majglobe|majorglobe|globe)(?:\s(\w+))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Fly</name>
+					<script>sendSpell("fly",matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:cfly|fly)\s+(\w+)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Haste</name>
+					<script>sendSpell("haste",matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:haste)(?:\s(\w+))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Stone Skin</name>
+					<script>sendSpell("stone skin",matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:stone|stoneskin|ss)(?:\s(\w+))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Farsee</name>
+					<script>sendSpell("farsee",matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:farsee|fars)(?:\s(\w+))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Sleep</name>
+					<script>sendSpell("sleep",matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:sleep|csleep)\s+(\w+)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Enhance Ability</name>
+					<script>local match = matches[2].." "..matches[3]
+sendSpell("enhance ability", match)</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:enhance)\s+(\w+)\s(str|int|wis|dex|con|cha)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Minor Creation</name>
+					<script>sendSpell("minor creation", matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:create|mc)\s+(\w+)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Concealment</name>
+					<script>sendSpell("concealment", matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:conceal)(?:\s+(\w+))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Invisibility</name>
+					<script>sendSpell("invisibility", matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:invis|invisibility)(?:\s+(\w+))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Levitate</name>
+					<script>sendSpell("levitate", matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:levi|levitate)(?:\s+(\w+))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Ice Armor</name>
+					<script>sendSpell("ice armor", "")</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:iarmor|icearmor|icearm)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Teleport</name>
+					<script>sendSpell("teleport", "")</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:teleport|tele)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Dimension Door</name>
+					<script>sendSpell("dimension door", matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:dd|dimdoor|dimensiondoor)\s+(\w+)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Relocate</name>
+					<script>sendSpell("relocate", matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:relo|relolcate)\s+(\w+)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>World Teleport</name>
+					<script>sendSpell("world teleport", "")</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:wteleport|wtele|worldtele|worldteleport)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Mass Invisibility</name>
+					<script>sendSpell("mass invisibility", "")</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:ia|massinvis|massinvisibility)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Coldshield</name>
+					<script>sendSpell("coldshield", "")</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:cshield|coldshield|cs)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>Ice Dagger</name>
+					<script>sendSpell("ice Dagger", "")</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(?:idagger|icedagger|id)$</regex>
+				</Alias>
+				<AliasGroup isActive="yes" isFolder="yes">
+					<name>Fighting Spells</name>
+					<script></script>
+					<command></command>
+					<packageName></packageName>
+					<regex></regex>
+					<Alias isActive="yes" isFolder="no">
+						<name>Chill Touch</name>
+						<script>sendFightingSpell("chill touch", matches[2])</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(?:chill|ct|ctouch)(?:\s(\w+))?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>Ice Darts</name>
+						<script>sendFightingSpell("ice darts", matches[2])</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(?:mm|dart|iced)(?:\s(\w+))?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>Shocking Grasp</name>
+						<script>sendFightingSpell("shocking grasp", matches[2])</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(?:shock|grasp|shockinggrasp|sg)(?:\s(\w+))?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>Lightning Bolt</name>
+						<script>sendFightingSpell("lightning bolt", matches[2])</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(?:lb|lightningbolt|lbolt|bolt)(?:\s(\w+))?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>Ray of Enfeeblement</name>
+						<script>sendFightingSpell("ray of enfeeblement", matches[2])</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(?:rof|rayofenfeeblement|ray)(?:\s(\w+))?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>Cone of Cold</name>
+						<script>sendFightingSpell("cone of cold", matches[2])</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(?:coc|cone|coneofcold)(?:\s(\w+))?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>Freezing Wind</name>
+						<script>sendFightingSpell("freezing wind", matches[2])</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(?:freezingwind|freezewind|fwind)(?:\s(\w+))?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>Minor Paralysis</name>
+						<script>sendFightingSpell("minor paralysis", matches[2])</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(?:minorpara|minpara|minorp)(?:\s(\w+))?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>Ice Storm</name>
+						<script>sendFightingSpell("ice storm", matches[2])</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(?:icestorm|storm|istorm)(?:\s(\w+))?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>Rain</name>
+						<script>sendFightingSpell("rain", matches[2])</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(?:rain)(?:\s(\w+))?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>Freeze</name>
+						<script>sendFightingSpell("freeze", matches[2])</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(?:freeze)(?:\s(\w+))?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>Chain Lightning</name>
+						<script>sendFightingSpell("chain lightning", matches[2])</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(?:chain|chainlightning|chainl)(?:\s(\w+))?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>Iceball</name>
+						<script>sendFightingSpell("iceball", matches[2])</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(?:iceball|ib|ice)(?:\s(\w+))?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>Flood</name>
+						<script>sendFightingSpell("flood", "")</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^flood$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>Ice Shards</name>
+						<script>sendFightingSpell("ice shards", "")</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(?:iceshards|shard)$</regex>
+					</Alias>
+				</AliasGroup>
+			</AliasGroup>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>Misc</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>Reset Stuff</name>
+					<script>printScript("Reseting")
+Blaz.Busy = false
+Blaz.SpellQueue = {}
+for Key,Value in pairs(Blaz.AutoSpells) do
+  Value.refreshing = false
+end</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^blazreset$</regex>
+				</Alias>
+			</AliasGroup>
+		</AliasGroup>
+	</AliasPackage>
+	<ActionPackage />
+	<ScriptPackage>
+		<ScriptGroup isActive="yes" isFolder="yes">
+			<name>Blaz</name>
+			<packageName></packageName>
+			<script></script>
+			<eventHandlerList />
+			<ScriptGroup isActive="yes" isFolder="yes">
+				<name>Caster</name>
+				<packageName></packageName>
+				<script></script>
+				<eventHandlerList />
+				<Script isActive="yes" isFolder="no">
+					<name>Remote Commands</name>
+					<packageName></packageName>
+					<script>function do_remote_spell(event, spell, target)
+  printScript("Added spell to queue: "..spell.." on "..target)
+  sendSpell(spell, target)
+end
+
+registerAnonymousEventHandler("onRemoteSpell","do_remote_spell")</script>
+					<eventHandlerList />
+				</Script>
+				<Script isActive="yes" isFolder="no">
+					<name>Process Queue</name>
+					<packageName></packageName>
+					<script>function processQueue()
+  printScript("Processing")
+  
+  if Blaz.Busy then
+    printScript("Busy")
+    return
+  end
+  
+  if not Blaz.Spell then
+    Blaz.Spell = table.remove(Blaz.SpellQueue, 1)
+    if Blaz.Spell then
+      printScript("Settings Spell: "..Blaz.Spell.spell.." on "..Blaz.Spell.target)
+    end
+  end
+  
+  if Blaz.Spell then
+    if canCast(Blaz.Spell.spell) then
+      Blaz.Busy = true
+      send("cast '"..Blaz.Spell.spell.."' "..Blaz.Spell.target)
+    else 
+      getReadyToCast(Blaz.Spell.spell)
+    end
+  else
+    printScript("No spells")
+    fly()
+  end
+end</script>
+					<eventHandlerList />
+				</Script>
+				<Script isActive="yes" isFolder="no">
+					<name>Casting Over</name>
+					<packageName></packageName>
+					<script>function castingOver()
+  Blaz.Busy = false
+  Blaz.Spell = nil
+  if next(Blaz.SpellQueue) == nil and not gmcp.Char.Combat.opponent then
+    memorize()
+  else
+    processQueue()
+  end
+end</script>
+					<eventHandlerList />
+				</Script>
+				<Script isActive="yes" isFolder="no">
+					<name>Target Not Here</name>
+					<packageName></packageName>
+					<script>function handleNotHere()
+  --TODO: Change the refreshing to false and maybe toggle the spell so it doesn't happen again.
+end
+
+registerAnonymousEventHandler("blazTargetNotHereEvent", "handleNotHere")</script>
+					<eventHandlerList />
+				</Script>
+			</ScriptGroup>
+			<Script isActive="yes" isFolder="no">
+				<name>On Prompt</name>
+				<packageName></packageName>
+				<script>function requestRescue()
+  -- if AutoRescue and 
+     -- gmcp.Char.Combat.tank and
+     -- gmcp.Char.Combat.tank.name == gmcp.Char.name then
+    -- raiseGlobalEvent("onRemoteCommand", "rescue", Fierymud.Character.name)
+  -- end
+end
+
+function handlePrompt()
+  if not gmcp.Char then
+    return
+  end
+  
+  raiseGlobalEvent("blazInfoEvent", gmcp.Char.name, gmcp.Char.class, gmcp.Room.id)
+  
+  autoSpells()
+
+  requestRescue()
+  
+  if Blaz.Spell ~= nil and canCast(Blaz.Spell["spell"]) then
+    processQueue()
+  end
+end
+
+registerAnonymousEventHandler("onPrompt", "handlePrompt")</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Auto Spells</name>
+				<packageName></packageName>
+				<script>function autoSpells()
+  if not gmcp.Char then
+    return
+  end
+  
+  local effects = gmcp.Char.Effects or {}
+  for Key, Value in pairs(effects) do
+    if containsKey(Blaz.AutoSpells, Key) then
+      Blaz.AutoSpells[Key]["refreshing"] = false
+    end
+  end
+
+  for Key, Value in pairs(Blaz.AutoSpells) do
+    if Value["auto"] and not containsKey(effects, Key) and not Blaz.AutoSpells[Key]["refreshing"] then
+      printScript("Auto Rereshing '"..Key.."'")
+      Blaz.AutoSpells[Key]["refreshing"] = true
+      if Blaz.Spells[Key].Classes[gmcp.Char.class] then
+        sendSpell(Key, "me")
+        printScript("Auto Rereshing Cast Spell '"..Key.."'")
+      elseif containsAny(Blaz.Spells[Key].Classes,Blaz.Tabs) then
+        raiseGlobalEvent("onRemoteSpell", Key, gmcp.Char.name)
+        printScript("Auto Rereshing Global Request '"..Key.."'")
+      else 
+        printScriptWarn("You do not know '"..Key.."' and no one in your tabs knows it either.")
+      Blaz.AutoSpells[Key]["refreshing"] = false
+      end
+    end
+  end
+end</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>On Load Event</name>
+				<packageName></packageName>
+				<script>function loadVars()
+  Blaz = {}
+  table.load(getMudletHomeDir() .. BlazPath, Blaz)
+  Blaz.Busy = false
+  Blaz.SpellQueue = {}
+  Blaz.Tabs = {}
+  Blaz.Traveling = false -- TODO
+  printScript("Loaded Blaz Vars from File")
+end
+
+function setUp()
+  loadVars()
+  
+  if Blaz.IntroCompleted then
+    printScript("Setup Complete")
+  else
+    expandAlias("blazhelp",false)
+    Blaz.IntroCompleted = true
+  end
+end
+
+registerAnonymousEventHandler("sysConnectionEvent", "setUp")</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Run Command All</name>
+				<packageName></packageName>
+				<script>function runFunction(event, command)
+  send(command)
+end
+
+registerAnonymousEventHandler("onRemoteCommandAll", "runFunction")</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>On Connection Events</name>
+				<packageName></packageName>
+				<script>function infoEvent(event,name,class,roomId)
+  Blaz.Tabs[name] = class
+  printScript("ConnectionInfo: "..name.." - "..class.."\nRoom: "..roomId)
+end
+
+registerAnonymousEventHandler("blazInfoEvent", "infoEvent")</script>
+				<eventHandlerList />
+			</Script>
+			<ScriptGroup isActive="yes" isFolder="yes">
+				<name>Utilities</name>
+				<packageName></packageName>
+				<script></script>
+				<eventHandlerList />
+				<Script isActive="yes" isFolder="no">
+					<name>Utils</name>
+					<packageName></packageName>
+					<script>local positionOrder = {"prone", "sitting", "standing", "flying"}
+
+function debugPrint(string)
+  if debug then
+    for match in string.gmatch(string, "[^\n]+") do
+      cecho("&lt;gold&gt;[ Script ]&lt;cyan&gt;  "..match.."\n")
+    end
+  end
+end
+
+function contains(table, val)
+  for i=1,#table do
+    if table[i] == val then 
+      return true
+    end
+  end
+  return false
+end
+
+function containsKey(table, key)
+  return table[key] ~= nil
+end
+
+function search(table, value)
+  for Key, Value in pairs(table) do
+    if Value == value then
+      return Key
+    end
+  end
+end
+
+function containsAny(table, check)
+  for Key, Value in pairs(check) do
+    if table[Value] then
+      return true
+    end
+  end
+  return false
+end
+
+function fly()
+  local position = gmcp.Char.position
+  if position == "flying" then
+    return
+  end
+  printScript("Changing Position from - "..position.." to flying")
+  if position == "prone" then
+    send("wake")
+    send("stand")
+    send("fly")
+  elseif position == "sitting" then
+    send("stand")
+    send("fly")
+  elseif position == "standing" then
+    send("fly")
+  end
+end
+
+function checkPosition(current, min)
+  printScript("Check Position "..search(positionOrder, current))
+  return search(positionOrder, current) &gt;= search(positionOrder, "standing") -- Only standing for now til Chinok fixes it
+  -- return search(positionOrder, current) &gt;= search(positionOrder, min)
+end
+
+function checkCombat(combat, combatOk)
+  local in_combat = combatOk == "yes" or not combat.opponent
+  printScript("In Combat "..tostring(in_combat))
+  return in_combat
+end
+
+function canCast(spell)
+  return spell and
+         not Blaz.Busy and
+         checkCombat(gmcp.Char.Combat, Blaz.Spells[spell]["ok_in_combat"]) and
+         checkPosition(gmcp.Char.position, Blaz.Spells[spell]["min_position"])
+end
+
+function getReadyToCast(spell)
+  if spell then
+    printScript("Getting Ready to Cast - "..spell)
+    if not checkCombat(gmcp.Char.Combat, Blaz.Spells[spell]["ok_in_combat"]) then
+      send("disengage")
+    end
+    if not checkPosition(gmcp.Char.position, Blaz.Spells[spell]["min_position"]) then
+      fly()
+    end
+  end
+end
+
+function sendSpell(spell, match)
+  local target = match or "me"
+  if Blaz.Spells[spell] ~= nil then
+    if containsAny(Blaz.Spells[spell].Classes,{gmcp.Char.class}) then
+      table.insert(Blaz.SpellQueue, {spell = spell, target = target})
+      processQueue()
+    else
+      -- raise
+    end
+  else
+    printScriptWarn("That is not a spell: '"..spell.."'")
+  end
+end
+
+function sendFightingSpell(spell, match)
+  local target = match or ""
+  if Blaz.Spells[spell] ~= nil then
+    table.insert(Blaz.SpellQueue, {spell = spell, target = target})
+    processQueue()
+  else
+    printScriptWarn("You do not know '"..spell.."'")
+  end
+end
+
+function memorize()
+  Blaz.Busy = true
+  send("rest;;memorize")
+end</script>
+					<eventHandlerList />
+				</Script>
+				<Script isActive="yes" isFolder="no">
+					<name>Print</name>
+					<packageName></packageName>
+					<script>local width = 50
+
+local function stripColor(string)
+  local pattern = "&lt;.*&gt;"
+  return string.gsub(string,pattern,"")
+end
+
+local function splitByChunk(text, chunkSize)
+    local s = {}
+    for i=1, #text, chunkSize do
+        s[#s+1] = text:sub(i,i+chunkSize - 1)
+    end
+    return s
+end
+
+function printScript(string)
+  for match in string.gmatch(string, "[^\n]+") do
+    cecho("&lt;tomato&gt;[ Blaz ]&lt;steel_blue&gt;  "..match.."\n")
+  end
+end
+
+function printScriptWarn(text)
+  printScript("&lt;red&gt;[ Warning ]&lt;steel_blue&gt; "..text)
+end
+
+function printMenuHeaderLine()
+  printScript(string.rep("=",width))
+end
+
+function printMenuLine()
+  printScript(string.rep("-",width))
+end
+
+function printMenuParagraph(text)
+  local strings = splitByChunk(text,width)
+  for i,v in ipairs(strings) do
+     printScript(string.gsub(v, '^%s*(.-)%s*$', '%1'))
+  end
+end
+
+function printMenuPadded(text,padding)
+  local header = " "..text.." "
+  local half = (width - string.len(stripColor(header))) / 2
+  printScript(string.rep(padding, math.floor(half))..header..string.rep(padding, math.ceil(half)))
+end
+
+function printMenuHeader(text)
+  printMenuPadded(text,"-")
+end
+
+function printMenuLeading(left,right,sep)
+  local string_count = width - (string.len(stripColor(left)) + string.len(stripColor(right)))
+  printScript(left..string.rep(sep,string_count)..right)
+end
+
+function printMenuJustified(left,right)
+  printMenuLeading(left, right,".")
+end</script>
+					<eventHandlerList />
+				</Script>
+				<Script isActive="yes" isFolder="no">
+					<name>File</name>
+					<packageName></packageName>
+					<script>BlazPath = "/Blaz/Blaz.lua"</script>
+					<eventHandlerList />
+				</Script>
+			</ScriptGroup>
+		</ScriptGroup>
+	</ScriptPackage>
+	<KeyPackage />
+	<VariablePackage>
+		<HiddenVariables />
+	</VariablePackage>
+</MudletPackage>
